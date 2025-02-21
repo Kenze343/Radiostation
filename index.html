@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="banner"></div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="" alt="Logo">
+        </div>
+        <div class="nav-center">
+            <a href="index.html">Home</a>
+            <a href="#">Request</a>
+            <a href="program.html">Schedule</a>
+            <a href="#">About Us</a>
+            <a href="apply.html">Apply Now</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="login-icon"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </nav>
+
+    <div class="neon-line-top"></div>
+
+    <div class="blue-section">
+        <div class="box">
+            <!-- Song artwork will be displayed here -->
+            <img id="songArtwork" class="song-artwork" src="default-image.jpg" alt="Song Artwork">
+        </div>
+
+        <!-- Dynamic Song Title and Artist Info -->
+        <div class="song-info" id="songInfoText">
+            <div class="song-title" id="songTitle">Loading...</div>
+            <div class="song-artist" id="songArtist">Artist Name</div>
+        </div>
+
+        <div class="play-button-container">
+            <button class="play-button" onclick="togglePlay()">
+                <i class="fa-solid fa-play" id="playPauseIcon"></i>
+            </button>
+        </div>
+
+        <div class="volume-slider-container">
+            <input type="range" class="volume-slider" min="0" max="100" value="50" orient="vertical">
+        </div>
+
+        <div class="box"></div>
+        <div class="request-button-container">
+            <button class="request-button" onclick="openModal()">
+                <i class="fa-solid fa-paper-plane"></i> Request
+            </button>
+        </div>
+    </div>
+
+    <div class="neon-line-bottom"></div>
+
+    <!-- Hidden audio element for the stream -->
+    <audio id="audioPlayer" style="display:none" preload="auto">
+        <source src="https://dc2.serverse.com:8002/stream.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="index.js"></script> <!-- Link to external JS -->
+</body>
+</html>
